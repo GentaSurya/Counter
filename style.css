@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --BLUE-DARK: rgb(44, 113, 215);
+    --BLUE-LIGHT:  rgb(197, 223, 254);
+    --WHITE: #fff;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--BLUE-LIGHT);
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.num-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--BLUE-DARK);
+    margin: 0 30px 0 30px;
+    padding: 40px;
+    width: 115px;
+    height: 120px;
+    border-radius: 20px;
+}
+
+.number {
+    font-weight: bolder;
+    font-size: 4rem;
+    color: var(--WHITE);
+}
+
+.button {
+    font-size: 4rem;
+    border: none;
+    color: var(--BLUE-DARK);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button:active {
+    opacity: 0.6;
+}
+
+@keyframes moveDown {
+    from{
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(600px);
+    }
+}
+
+@keyframes moveUp {
+    from{
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-600px);
+    }
+}
+
+.moveDown {
+    animation: moveDown 1s forwards;
+    opacity: 0.4;
+}
+
+.moveUp {
+    animation: moveUp 1s ease forwards;
+    opacity: 0.4;
+}
+
+.changeBg {
+    background-color: var(--WHITE);
+}
+
+
+@media (max-width: 500px) {
+.num-container {
+    margin: 0 30px;
+    width: 130px;
+    height: 140px;
+}
+
+.number {
+    font-size: 6rem;
+}
+
+.button {
+    font-size: 6rem;
+}
+}
+
+@media (max-width: 350px) {
+.num-container {
+    margin: 0 30px;
+    width: 115px;
+    height: 120px;
+}
+
+.number {
+    font-size: 4.1rem;
+}
+
+.button {
+    font-size: 5rem;
+}
+}
